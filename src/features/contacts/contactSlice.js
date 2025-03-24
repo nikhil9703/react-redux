@@ -16,7 +16,7 @@ const contactSlice = createSlice({
             const index = state.contacts.findIndex(
                 contact => contact.phone_no === action.payload.phone_no
             )
-            if (index === -1){
+            if (index !== -1){
                 state.contacts[index]= action.payload
             }
         }
